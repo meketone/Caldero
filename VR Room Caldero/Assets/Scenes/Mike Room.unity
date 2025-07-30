@@ -253,8 +253,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6558740, guid: 7d6463315d4e403f9ccc2aea0d6ecc77, type: 3}
+      propertyPath: m_Size.x
+      value: 0.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 6558740, guid: 7d6463315d4e403f9ccc2aea0d6ecc77, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6558740, guid: 7d6463315d4e403f9ccc2aea0d6ecc77, type: 3}
+      propertyPath: m_Center.x
+      value: -0.27
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4751,7 +4759,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -5908,7 +5916,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -13061,6 +13069,7 @@ GameObject:
   - component: {fileID: 943817232}
   - component: {fileID: 943817234}
   - component: {fileID: 943817233}
+  - component: {fileID: 943817235}
   m_Layer: 0
   m_Name: Welcome Background
   m_TagString: Untagged
@@ -13127,6 +13136,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 943817231}
   m_CullTransparentMesh: 1
+--- !u!114 &943817235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 943817231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9be2df20dd4c2d74a92ddf9be77c7a94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  messageOutput: {fileID: 455335135}
+  OnComplete:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 455335134}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  messages:
+  - "\xA1No esperaba menos de ti! \n\nCada ingrediente necesita un nombre, una cantidad,
+    una temperatura y un toque de magia. \xA1Prep\xE1rate!"
 --- !u!1001 &1013423530
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20390,7 +20430,7 @@ PrefabInstance:
     - target: {fileID: 6598815579406187037, guid: 18ddb545287c546e19cc77dc9fbb2189,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -24050,9 +24090,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 95538263452871118, guid: ccd8c3b89aa02e943a08ab9238a8a70c,
         type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: cb4c96787ba07184d9956f64f02cee49, type: 3}
+    - target: {fileID: 95538263452871118, guid: ccd8c3b89aa02e943a08ab9238a8a70c,
+        type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 95538263452871118, guid: ccd8c3b89aa02e943a08ab9238a8a70c,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 98b9671e921af39479a274e0b2e74621, type: 2}
     - target: {fileID: 95538263452871118, guid: ccd8c3b89aa02e943a08ab9238a8a70c,
         type: 3}
       propertyPath: m_ApplyRootMotion
@@ -24279,7 +24329,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_TeleportationProvider: {fileID: 1313711684}
-  m_MatchOrientation: 2
+  m_MatchOrientation: 0
   m_MatchDirectionalInput: 0
   m_TeleportTrigger: 0
   m_FilterSelectionByHitNormal: 0
